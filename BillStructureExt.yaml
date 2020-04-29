@@ -1,0 +1,10 @@
+components:
+  schemas:
+    BillStructureExt:
+      title: ExtendedBillStructure
+      type: object
+      allOf:
+       - $ref: "../spec.yaml#/components/schemas/BillStructure"
+       - properties:
+           nextCycleSpecification:
+            $ref: "../spec.yaml#/components/schemas/BillingCycleSpecificationRefOrValue"
