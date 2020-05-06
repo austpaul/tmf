@@ -1,0 +1,23 @@
+{
+  "definitions": {
+    "BillStructure":{
+      "$ref": "https://raw.githubusercontent.com/austpaul/tmf/master/spec.json#/components/schemas/BillStructure"
+    },
+    "BillingCycleSpecificationRefOrValue": {
+      "$ref": "https://raw.githubusercontent.com/austpaul/tmf/master/spec.json#/components/schemas/BillingCycleSpecificationRefOrValue"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/BillStructure"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "nextCycleSpecification": {
+          "$ref": "#/definitions/BillingCycleSpecificationRefOrValue"
+        }
+      }
+    }
+  ]
+}
